@@ -3,10 +3,13 @@
 
 
 Group members: 
+
   Liam Edelman
     <bio>
+  
   Duong Le
     <bio>
+      
   Corey Habel
     I am originally from Gurnee, a suburb about an hour north of Chicago. This is my third year 
     at UIC and I plan to graduate next May. I have an interest in machine learning and artificial 
