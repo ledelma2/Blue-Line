@@ -7,6 +7,8 @@ Group members:
   Liam Edelman
   
   Duong Le
+  
+    I am currently undergraduate student and I will graduate this May. I'm from a small village in Vietname and I've been here for about 7 years. My interest is on Web development, Mobile Development and, of course, video game (even though I did not take the class yet). I also like to design interface and currently also taking CS422 because of that passion.
       
   Corey Habel
   
