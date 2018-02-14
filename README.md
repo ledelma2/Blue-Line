@@ -1,7 +1,7 @@
 ## Table of Contents
 1. [Project Description](https://github.com/ledelma2/Blue-Line/blob/master/README.md#project-description)
 2. [Group Member List](https://github.com/ledelma2/Blue-Line/blob/master/README.md#group-members)
-3. Reports
+3. [Reports](https://github.com/ledelma2/Blue-Line/blob/master/README.md#reports)
 
 
 ## Project Description
