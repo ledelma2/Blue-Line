@@ -5,6 +5,7 @@
 # Group members: 
 
 ##  Liam Edelman
+Hailing from Deer Park, Illinois, Liam Edelman is a Computer Science major at UIC. Currently in his senior year, he plans on graduating with a Bachelors of Science in CS this Fall. Liam first began coding in High School, and is proficient in many different languages, such as C/C++/C#, Python, Java, and SQL. This semester, Liam is taking multiple classes in the Artificial Intelligence discipline such as Machine Learning, Natural Language Processing, and Introduction to Data Science. In his free time Liam enjoys watching movies, participating in online fantasy sports leagues, and playing video games. 
 
 ##  Duong Le
 I am currently undergraduate student and I will graduate this May. I'm from a small village in Vietname and I've been here for about 7 years. My interest is on Web development, Mobile Development and, of course, video game (even though I did not take the class yet). I also like to design interface and currently also taking CS422 because of that passion.
