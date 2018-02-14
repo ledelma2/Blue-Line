@@ -1,5 +1,5 @@
 ## Table of Contents
-1. (Project Description)[https://github.com/ledelma2/Blue-Line/blob/master/README.md#project-description]
+1. [Project Description](https://github.com/ledelma2/Blue-Line/blob/master/README.md#project-description)
 2. Group Member List
 3. Reports
 
