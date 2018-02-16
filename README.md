@@ -26,7 +26,7 @@ I am from Northwest suburbs located around Crystal Lake/Algonquin area. This is 
 
 ## Reports
 
-### Data Discovery - Website Reports:
+### Data Discovery Website Reports:
 
 https://www.wunderground.com/history/
 The data represents the history of weather in the location that the user wants to look at. The data of weather consists of many attribute such as low temperature, higher temperature, humidity, etc. This database is useful for scientists who want to research on weather and need data to work with. It organized by date or the time of the day depend on the user setting. This data set would join with census database or crime database because the weather would effect with change in population and crime rate.
