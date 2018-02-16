@@ -28,15 +28,15 @@ I am from Northwest suburbs located around Crystal Lake/Algonquin area. This is 
 
 ### Data Discovery - Website Reports:
 
-[https://www.wunderground.com/history/]
+https://www.wunderground.com/history/
 The data represents the history of weather in the location that the user wants to look at. The data of weather consists of many attribute such as low temperature, higher temperature, humidity, etc. This database is useful for scientists who want to research on weather and need data to work with. It organized by date or the time of the day depend on the user setting. This data set would join with census database or crime database because the weather would effect with change in population and crime rate.
  
-[https://www.ilsos.gov/isa/landSalesSearch.do]
+https://www.ilsos.gov/isa/landSalesSearch.do
 Illinois Public domain land tract Sales list all of the land transaction within illinois. The database contains the name of the purchaser, date, area size, and price. This data is useful for real estate people who looking for purchase lands and need to find who owns them. This data could join with businesses licenses or demographic of chicago because some businesses dealing with land ownership.
 
 
 
-[https://www.chicagohealthatlas.org/]
+https://www.chicagohealthatlas.org/
 
 This is a dataset of many different health indicators and statistics for the city of Chicago. It shows data for statistics such as vaccinations, mortality rates, and drug use. These stats are then organized by demographics such as age, race, sex, etc. This data is useful for noticing trends in these demographics, such as how they relate to certain health conditions, or toward habits like tobacco use and violence. This data can be joined to other datasets including demographic information to analyze relationships between other factors such as geographic location and the resulting health issues.
 
