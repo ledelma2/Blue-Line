@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import csv
+import string
 
 
 r = urllib.request.urlopen('https://www.yelp.com/biz/lowcountry-south-loop-chicago?frvs=True').read()
@@ -17,9 +18,27 @@ with open('restaurant.csv', 'w', newline='') as csvfile:
   csvwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
   csvwriter.writerow(['restaurantID', 'name', 'location', 'reviewCount', 'rating'])
 
-  name = soup.find(class_='biz-page-title embossed-text-white')
 
-  print(name.text.strip())
+
+  name = soup.find(class_='biz-page-title embossed-text-white').text.strip()
+
+  location = soup.find(class_='street-address').text.strip()
+
+  reviews = soup.find(class_='review-count rating-qualifier').text.strip()
+  reviewCount = reviews.strip(string.ascii_letters)
+
+  ratingDiv = soup.find(class_='i-stars i-stars--large-4-half rating-very-large')
+  rating = ratingDiv.find('img')['alt'].strip(string.ascii_letters)
+
+  print('Name = ')
+  print(name)
+
+  print('Rating = ')
+  print(rating)
+
+  print('Location = ')
+  print(location)
+  
 
   
 
