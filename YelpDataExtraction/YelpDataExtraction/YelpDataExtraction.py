@@ -30,14 +30,14 @@ with open('restaurant.csv', 'w', newline='') as csvfile:
   ratingDiv = soup.find(class_='i-stars i-stars--large-4-half rating-very-large')
   rating = ratingDiv.find('img')['alt'].strip(string.ascii_letters)
 
-  print('Name = ')
-  print(name)
+  categoriesDiv = soup.find(class_='category-str-list')
+  categoriesList = categoriesDiv.find_all('a')
 
-  print('Rating = ')
-  print(rating)
+  categories = []
+  for category in categoriesList:
+    categories.append(category.text)
 
-  print('Location = ')
-  print(location)
+  print(categories)
   
 
   
