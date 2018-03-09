@@ -29,4 +29,17 @@ YelpPage = urllib.request.urlopen(full).read()
 soup = BeautifulSoup(YelpPage, "html.parser")
 
 resultarr = soup.find_all("li", class_="regular-search-result")
-print(resultarr[0].address.prettify())
+tot = 0
+while(len(resultarr) != 0):
+    for i in resultarr:
+        address = str(i.address)
+        if "60605" not in address:
+            continue
+        else:
+            tot = tot + 1
+            print(tot)
+    Page = Page + 10
+    full = firsthalf + str(Page) + secondhalf
+    YelpPage = urllib.request.urlopen(full).read()
+    soup = BeautifulSoup(YelpPage, "html.parser")
+    resultarr = soup.find_all("li", class_="regular-search-result")
