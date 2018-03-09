@@ -31,7 +31,11 @@ resultarr = soup.find_all("li", class_="regular-search-result")
 
 with open('restaurant.csv', 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile, quoting=csv.QUOTE_MINIMAL)
-    csvwriter.writerow(['name', 'location', 'reviewCount', 'rating', 'categories', 'address', 'GoodforKids'])
+    csvwriter.writerow(['name', 'location', 'reviewCount', 'rating', 'categories', 'address', 'GoodforKids',
+                        'acceptsCreditCards', 'parking', 'attire', 'goodForGroups', 'priceRange',
+                        'takesReservations', 'delivery', 'takeout', 'waiterService', 'outdoorSeating',
+                        'wifi', 'alcohol', 'NoiseLevel', 'ambience', 'hasTV', 'caters', 'wheelchairAccessible',
+                        'website', 'phoneNumber'])
 
     while(len(resultarr) != 0):
         
@@ -122,14 +126,18 @@ with open('restaurant.csv', 'w', newline='') as csvfile:
 
                 # short def list
                 defList1 = RestaurantSoup.find(class_='short-def-list')
+                if defList1 is None:
+                  continue
                 defList2 = defList1.find_next(class_='short-def-list')
+                if defList2 is None:
+                  continue
                 defList3 = defList2.find_next(class_='short-def-list')
 
                 #print(defList)
 
                 if defList3 is None:
                     dl_list = defList2.find_all("dl")
-                elif deflist2 is None:
+                elif defList2 is None:
                     dl_list = defList1.find_all("dl")
                 else:
                     dl_list = defList3.find_all("dl")
