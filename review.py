@@ -10,17 +10,15 @@ import urllib
 
 csv = open("review.csv", "w")
 csv.write("reviewID, businessID, reviewerID, date, reviewContent, rating, usefulCount, coolCount, funnyCount\n")
-
-reviewID
-businessID
-reviewerID
-date
-reviewContent
-rating
-usefulCount
-coolCount
-funnyCount
-
+#reviewID
+#businessID
+#reviewerID
+#date
+#reviewContent
+#rating
+#usefulCount
+#coolCount
+#funnyCount
 Page = 0
 
 firsthalf = "https://www.yelp.com/search?find_loc=60605&start="
@@ -28,5 +26,7 @@ secondhalf = "&cflt=restaurants"
 full = firsthalf + str(Page) + secondhalf
 
 YelpPage = urllib.request.urlopen(full).read()
-soup = BeautifulSoup(YelpPage, "lxml")
-print(soup)
+soup = BeautifulSoup(YelpPage, "html.parser")
+
+resultarr = soup.find_all("li", class_="regular-search-result")
+print(resultarr[0].address.prettify())
