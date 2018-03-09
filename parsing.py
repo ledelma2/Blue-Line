@@ -1,7 +1,9 @@
-#
-# Corey Habel - chabel2
-#
-#
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar  8 18:28:15 2018
+
+@author: Liam Edelman
+"""
 
 from bs4 import BeautifulSoup
 import urllib.request
