@@ -48,12 +48,37 @@ import urllib
 #Restaurant Name, Address, Failed inspection on, Alive for x years
 
 InspectionURL = "https://data.cityofchicago.org/resource/cwig-ma7x.json?$select=inspection_date,address,dba_name&$where=results=%27Fail%27%20AND%20zip%20%3C%2060608%20AND%20zip%20%3E%2060600&$order=inspection_date%20ASC&$limit=50000"
-LicenseURL = "https://data.cityofchicago.org/resource/xqx5-8hwx.json?$select=expiration_date,doing_business_as_name&$where=zip_code%20%3E%20%2760600%27%20AND%20zip_code%20%3C%20%2760608%27&$order=expiration_date%20DESC&$limit=500000"
+LicenseURL = "https://data.cityofchicago.org/resource/xqx5-8hwx.json?$select=expiration_date,doing_business_as_name&$where=zip_code%20%3E%20%2760600%27%20AND%20zip_code%20%3C%20%2760608%27&$order=expiration_date%20DESC&$limit=100000"
 FailedInspections = json.load(urllib.request.urlopen(InspectionURL))
 IssuedLicenses = json.load(urllib.request.urlopen(LicenseURL))
-print(len(IssuedLicenses))
 
-#for entry in FailedInspections:
-#    Name = entry.get('dba_name')
-#    Address = entry.get('address')
-#    Date = entry.get('inspection_date')
+csv = open("query8.csv", "w")
+csv.write("Name, Address, Failed inspection on, Alive for x years\n")
+
+
+
+for entry in FailedInspections:
+    Name = entry.get('dba_name')
+    Address = entry.get('address')
+    Date = entry.get('inspection_date')
+    YearFailed = int(Date[:4])
+    
+    for _license in IssuedLicenses:
+        if Name == _license.get('doing_business_as_name'):
+            Lifespan = int(_license.get('expiration_date')[:4]) - YearFailed
+            csv.write(Name + "," + Address + "," + Date + "," + str(Lifespan) + "\n")
+            break
+
+csv.close()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
