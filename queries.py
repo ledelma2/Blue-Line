@@ -24,7 +24,7 @@ import urllib
 
 #Example of SoQL URL Parsing
 # =============================================================================
-# MainCrimeURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$where=beat%20=%20%271023%27&$select=beat,block&$order=block%20ASC"
+# MainCrimeURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$where=beat%20=%20%271023%27&$select=beat,block&$order=block%20ASC&$limit=50000"
 # 
 # URL = MainCrimeURL
 # 
@@ -47,11 +47,11 @@ import urllib
 #What is the viability of a business, i.e., how long is a business active, after a failed food inspection?
 #Restaurant Name, Address, Failed inspection on, Alive for x years
 
-InspectionURL = "https://data.cityofchicago.org/resource/cwig-ma7x.json?$select=inspection_date,address,dba_name&$where=results=%27Fail%27%20AND%20zip%20%3C%2060608%20AND%20zip%20%3E%2060600&$order=inspection_date%20ASC"
-LicenseURL = "https://data.cityofchicago.org/resource/xqx5-8hwx.json?$select=expiration_date,doing_business_as_name&$where=zip_code%20%3E%20%2760600%27%20AND%20zip_code%20%3C%20%2760608%27&$order=expiration_date%20DESC"
+InspectionURL = "https://data.cityofchicago.org/resource/cwig-ma7x.json?$select=inspection_date,address,dba_name&$where=results=%27Fail%27%20AND%20zip%20%3C%2060608%20AND%20zip%20%3E%2060600&$order=inspection_date%20ASC&$limit=50000"
+LicenseURL = "https://data.cityofchicago.org/resource/xqx5-8hwx.json?$select=expiration_date,doing_business_as_name&$where=zip_code%20%3E%20%2760600%27%20AND%20zip_code%20%3C%20%2760608%27&$order=expiration_date%20DESC&$limit=500000"
 FailedInspections = json.load(urllib.request.urlopen(InspectionURL))
 IssuedLicenses = json.load(urllib.request.urlopen(LicenseURL))
-print(len(FailedInspections))
+print(len(IssuedLicenses))
 
 #for entry in FailedInspections:
 #    Name = entry.get('dba_name')
