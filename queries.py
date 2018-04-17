@@ -11,7 +11,7 @@ import urllib
 #What is the viability of a business, i.e., how long is a business active, after a failed food inspection?
 #Restaurant Name, Address, Failed inspection on, Alive for x years
 
-#Example of API Parsing
+#Example of data.cityofchicago API
 # =============================================================================
 # MainCrimeURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?"
 #
@@ -32,5 +32,16 @@ import urllib
 # 
 # JSON = json.load(urllib.request.urlopen(URL))
 # 
+# print(json.dumps(JSON, sort_keys=True, indent=4))
+# =============================================================================
+
+#Example of census.gov GeoCoder API
+# =============================================================================
+# MainCrimeURL = "https://geocoding.geo.census.gov/geocoder/locations/address?street=1250+South+Halsted+St&zip=60607&benchmark=Public_AR_Census2010&format=json"
+#  
+# URL = MainCrimeURL
+#  
+# JSON = json.load(urllib.request.urlopen(URL))
+#  
 # print(json.dumps(JSON, sort_keys=True, indent=4))
 # =============================================================================
