@@ -11,14 +11,26 @@ import urllib
 #What is the viability of a business, i.e., how long is a business active, after a failed food inspection?
 #Restaurant Name, Address, Failed inspection on, Alive for x years
 
-MainCrimeURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?"
+#Example of API Parsing
+# =============================================================================
+# MainCrimeURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?"
+#
+# Block = "024XX W OGDEN AVE"
+#
+# URL = MainCrimeURL + urllib.parse.urlencode({"block" : Block})
+#
+# JSON = json.load(urllib.request.urlopen(URL))
+#
+# print(json.dumps(JSON, sort_keys=True, indent=4))
+# =============================================================================
 
-Block = "024XX W OGDEN AVE"
-
-URL = MainCrimeURL + urllib.parse.urlencode({"block" : Block})
-
-JSON = json.load(urllib.request.urlopen(URL))
-
-print(json.dumps(JSON, sort_keys=True, indent=4))
-
-exit
+#Example of SoQL URL Parsing
+# =============================================================================
+# MainCrimeURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$where=beat%20=%20%271023%27&$select=beat,block&$order=block%20ASC"
+# 
+# URL = MainCrimeURL
+# 
+# JSON = json.load(urllib.request.urlopen(URL))
+# 
+# print(json.dumps(JSON, sort_keys=True, indent=4))
+# =============================================================================
