@@ -37,11 +37,11 @@ import urllib
 
 #Example of census.gov GeoCoder API
 # =============================================================================
-MainCrimeURL = "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1250+South+Halsted+St&zip=60607&benchmark=Public_AR_Census2010&vintage=Census2010_Census2010&layers=14&format=json"
+# MainCensusURL = "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1250+South+Halsted+St&zip=60607&benchmark=Public_AR_Census2010&vintage=Census2010_Census2010&layers=14&format=json"
 #  
-URL = MainCrimeURL
+# URL = MainCrimeURL
 #  
-JSON = json.load(urllib.request.urlopen(URL))
+# JSON = json.load(urllib.request.urlopen(URL))
 #  
-print(json.dumps(JSON, sort_keys=True, indent=4))
+# print(json.dumps(JSON, sort_keys=True, indent=4))
 # =============================================================================
