@@ -8,8 +8,6 @@ Created on Mon Apr 16 12:42:26 2018
 import json
 import urllib
 
-#What is the viability of a business, i.e., how long is a business active, after a failed food inspection?
-#Restaurant Name, Address, Failed inspection on, Alive for x years
 
 #Example of data.cityofchicago API
 # =============================================================================
@@ -45,3 +43,17 @@ import urllib
 #  
 # print(json.dumps(JSON, sort_keys=True, indent=4))
 # =============================================================================
+
+#What is the viability of a business, i.e., how long is a business active, after a failed food inspection?
+#Restaurant Name, Address, Failed inspection on, Alive for x years
+
+InspectionURL = "https://data.cityofchicago.org/resource/cwig-ma7x.json?$select=inspection_date,address,dba_name&$where=results=%27Fail%27%20AND%20zip%20%3C%2060608%20AND%20zip%20%3E%2060600&$order=inspection_date%20ASC"
+LicenseURL = "https://data.cityofchicago.org/resource/xqx5-8hwx.json?$select=expiration_date,doing_business_as_name&$where=zip_code%20%3E%20%2760600%27%20AND%20zip_code%20%3C%20%2760608%27&$order=expiration_date%20DESC"
+FailedInspections = json.load(urllib.request.urlopen(InspectionURL))
+IssuedLicenses = json.load(urllib.request.urlopen(LicenseURL))
+print(len(FailedInspections))
+
+#for entry in FailedInspections:
+#    Name = entry.get('dba_name')
+#    Address = entry.get('address')
+#    Date = entry.get('inspection_date')
