@@ -39,7 +39,7 @@ import urllib
 # =============================================================================
 # MainCensusURL = "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1250+South+Halsted+St&zip=60607&benchmark=Public_AR_Census2010&vintage=Census2010_Census2010&layers=14&format=json"
 #  
-# URL = MainCrimeURL
+# URL = MainCensusURL
 #  
 # JSON = json.load(urllib.request.urlopen(URL))
 #  
