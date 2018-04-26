@@ -75,8 +75,8 @@ csv.close()
 #Does having a liquor license influence crime incidents in the neighborhood?
 #Census Block, # of Businesses with liquor licenses, # of Crimes, # of Arrests
 
-CrimeURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$select=block,%20arrest&$where=date%20%3E%20%272016-01-01T00:00:00.000%27&$order=block%20DESC"
-LicenseURL = "https://data.cityofchicago.org/resource/nrmj-3kcf.json?$select=address,%20zip_code,%20expiration_date&$where=(zip_code%20%3E%20%2760600%27%20AND%20zip_code%20%3C%20%2760608%27)%20AND%20(business_activity_id=%27638%27%20OR%20business_activity_id=%27774%27%20OR%20business_activity_id=%27829%27)%20AND%20(expiration_date%20%3E%20%272018-04-17T00:00:00.000%27)&$order=address%20DESC&$limit=100000"
+CrimeURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$select=block,%20arrest&$where=date%20%3E%20%272016-01-01T00:00:00.000%27&$order=block%20DESC&$limit=100000"
+LicenseURL = "https://data.cityofchicago.org/resource/nrmj-3kcf.json?$select=address,%20zip_code,%20expiration_date&$where=(zip_code%20%3E%20%2760600%27%20AND%20zip_code%20%3C%20%2760608%27)%20AND%20(business_activity_id=%27638%27%20OR%20business_activity_id=%27774%27%20OR%20business_activity_id=%27829%27)%20AND%20(expiration_date%20%3E%20%272018-04-17T00:00:00.000%27)&$order=address%20DESC&$limit=50000"
 LiquorLicenses = json.load(urllib.request.urlopen(LicenseURL))
 CrimeReports = json.load(urllib.request.urlopen(CrimeURL))
 

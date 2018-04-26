@@ -12,3 +12,7 @@ Instructions for Query 8 and 9:
 
 Run the queries.py file as normal on a machine with Python 3.0 or better. Results will be sent to query8.csv and query9.csv respectively.
 You must have a stable internet connection for the results to be consistent, since the application uses only API's.
+
+Instructions for Sentiment Query:
+
+Run sentiment_query.py on a machine with Python 3.0 or better.
